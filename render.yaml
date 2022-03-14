@@ -13,5 +13,5 @@ services:
     envVars:
       - key: DEFAULT_RUBY_VERSION
         value: 2.7
-    buildCommand: cd ruby-app-2 && ./render-build.sh
-    startCommand: cd ruby-app-2 &&./render-start.sh
+    buildCommand: ./render-build.sh
+    startCommand: ./render-start.sh

@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: sample-ruby-app
-    env: ruby
-    buildCommand: ./render-build.sh
-    startCommand: ./render-start.sh
