@@ -2,10 +2,16 @@ services:
   - type: web
     name: sample-ruby-app-1
     env: ruby
-    buildCommand: ruby-install ruby 3.1 && cd ruby-app-1 && ./render-build.sh
+    envVars:
+      - key: DEFAULT_RUBY_VERSION
+        value: 3.1
+    buildCommand: cd ruby-app-1 && ./render-build.sh
     startCommand: cd ruby-app-1 &&./render-start.sh
   - type: web
     name: sample-ruby-app-2
     env: ruby
-    buildCommand: ruby-install ruby 2.7 && cd ruby-app-2 && ./render-build.sh
+    envVars:
+      - key: DEFAULT_RUBY_VERSION
+        value: 2.7
+    buildCommand: cd ruby-app-2 && ./render-build.sh
     startCommand: cd ruby-app-2 &&./render-start.sh
