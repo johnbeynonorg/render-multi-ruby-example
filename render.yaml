@@ -7,6 +7,9 @@ services:
         value: 3.1
     buildCommand: cd ruby-app-1 && ./render-build.sh
     startCommand: cd ruby-app-1 &&./render-start.sh
+    buildFilter:
+      paths:
+      - ruby-app-1/**
   - type: web
     name: sample-ruby-app-2
     env: ruby
@@ -15,3 +18,6 @@ services:
         value: 2.7
     buildCommand: cd ruby-app-2 && ./render-build.sh
     startCommand: cd ruby-app-2 &&./render-start.sh
+    buildFilter:
+      paths:
+      - ruby-app-2/**
